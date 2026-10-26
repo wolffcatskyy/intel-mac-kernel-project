@@ -16,36 +16,50 @@ tested hardware profiles and tools that Linux distributions and Mac owners can u
 [Find a contributor task](https://github.com/wolffcatskyy/intel-mac-kernel-project/issues) ·
 [See the roadmap](docs/ROADMAP.md)
 
-## The hardware still works. The missing piece is a shared support effort.
+## What your Mac needs. Without what it doesn’t.
 
-Linux gives Intel Macs a future beyond their last supported macOS release. But being
-able to boot Linux and having a Mac that works well every day are different things.
+A general-purpose Linux kernel must support an enormous range of computers. Your Mac
+has a particular set of components. It doesn’t need every other computer’s drivers,
+but it does need the right support for its own hardware.
 
-Apple designed these computers as complete systems. Graphics, firmware, audio, input
-devices and power management vary across generations, and some need support that a
-generic installation cannot supply on its own. Owners can end up piecing together
-drivers, patches and boot settings before the machine feels complete.
+**The Intel Mac Kernel Project aims to make both sides deliberate: include the support
+your Mac needs, and leave out unrelated hardware support.**
 
-The community has already done much of that work. The problem is making it travel:
-a fix discovered for one model should become something the next owner can use, a
-distribution can package and a maintainer can check against the next kernel.
+### What goes in
 
-**That is what the Intel Mac Kernel Project is being built to do.**
+- **Drivers for the actual hardware:** graphics, storage, networking, audio, input
+  devices and the buses that connect them.
+- **Mac-specific support:** applicable Apple platform drivers, model-specific quirks
+  and reviewed fixes that may otherwise require manual configuration or patches.
+- **Required firmware and dependencies:** identify what each driver needs, including
+  firmware needed before the root filesystem becomes available.
+- **Support for the way you use the machine:** encryption, virtualization, filesystems,
+  peripherals and upgraded components belong in the configuration when required.
+- **Versioned configuration rules:** preserve those requirements when kernel options
+  and dependencies change.
 
-We’re bringing model-specific knowledge into a shared configuration database, then
-combining it with hardware detection to build for the Mac actually in front of us.
-That means accounting for the differences between a MacBook and an iMac, between
-hardware generations, and between an original machine and one its owner has upgraded.
+### What stays out
 
-The work spans connectivity, graphics, sound, keyboards and trackpads, battery and
-cooling behavior, storage and boot compatibility. Each tested improvement can become
-a reusable part of a model profile instead of another workaround buried in a thread.
+- **Drivers for unrelated hardware**, once the profile and hardware checks establish
+  that they are unnecessary.
+- **Unused platform and subsystem support**, where removing it does not break a required
+  feature, dependency or selected peripheral.
+- **One-size-fits-all workarounds:** a fix for one Mac family should not become an
+  unexplained setting on every Intel Mac.
 
-**The ambition: make choosing Linux the beginning of a Mac’s next chapter, rather
-than the beginning of another troubleshooting project.**
+Much of the necessary support already exists in Linux. The job is to select it correctly,
+bring applicable fixes together and avoid carrying unrelated support simply because a
+generic kernel must accommodate other machines.
 
-See the [roadmap](docs/ROADMAP.md) for development work and the
-[support matrix](docs/SUPPORT.md) for current coverage.
+Built-in drivers can remove the need to load modules during boot. Compatible storage
+layouts can also boot without an initramfs. Neither is an absolute rule: encrypted-root
+setups can keep a minimal initramfs, and drivers that require separate packaging remain
+explicit exceptions.
+
+**Smaller by selecting carefully. More complete by including the right things.**
+
+These are design goals. The [support matrix](docs/SUPPORT.md) records current coverage;
+the [roadmap](docs/ROADMAP.md) tracks what remains to build.
 
 ## Known configurations, verified against the actual hardware
 

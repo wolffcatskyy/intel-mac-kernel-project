@@ -1,0 +1,110 @@
+name: Share your Mac's results
+description: Report what works, fails, or has not been tested. No coding or fork needed.
+title: "[Results] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Anyone with a GitHub account can share observations here. No coding, fork, installation of this toolkit, or special tests are required.
+        Report only what you already tried. Stock Linux results and failures are useful too.
+        This is a PUBLIC report: omit serial numbers, UUIDs, MAC addresses, credentials and raw personal logs.
+  - type: input
+    id: model
+    attributes:
+      label: Mac model
+      description: A model identifier such as MacPro6,1, or the model name and year. Do not enter its serial number.
+      placeholder: Mac Pro (Late 2013), MacPro6,1
+    validations:
+      required: true
+  - type: input
+    id: distribution
+    attributes:
+      label: Linux distribution and version
+      placeholder: CachyOS, Ubuntu 24.04, Fedora...
+    validations:
+      required: true
+  - type: input
+    id: kernel
+    attributes:
+      label: Kernel version, if known
+      description: Optional. State stock or custom if you do not know the exact version.
+  - type: textarea
+    id: components
+    attributes:
+      label: Components or changes, if known
+      description: CPU/GPU, storage adapters, docks or upgraded Wi-Fi. Optional; do not post device serials or account information.
+  - type: dropdown
+    id: boot
+    attributes:
+      label: Boot and login
+      options: ["Not tested / unknown", "Works", "Partly works", "Fails"]
+    validations:
+      required: true
+  - type: dropdown
+    id: display
+    attributes:
+      label: Display output
+      options: ["Not tested / unknown", "Works", "Partly works", "Fails"]
+    validations:
+      required: true
+  - type: dropdown
+    id: video
+    attributes:
+      label: Video playback
+      options: ["Not tested / unknown", "Works", "Partly works", "Fails"]
+  - type: dropdown
+    id: audio
+    attributes:
+      label: Sound
+      options: ["Not tested / unknown", "Works", "Partly works", "Fails"]
+  - type: dropdown
+    id: wifi
+    attributes:
+      label: Wi-Fi
+      options: ["Not tested / unknown", "Works", "Partly works", "Fails", "No Wi-Fi hardware"]
+  - type: dropdown
+    id: ethernet
+    attributes:
+      label: Ethernet
+      options: ["Not tested / unknown", "Works", "Partly works", "Fails", "Not available"]
+  - type: dropdown
+    id: peripherals
+    attributes:
+      label: Keyboard, trackpad, USB and other peripherals
+      options: ["Not tested / unknown", "Works", "Partly works", "Fails"]
+  - type: dropdown
+    id: sleep
+    attributes:
+      label: Sleep and wake
+      options: ["Not tested / unknown", "Works", "Partly works", "Fails"]
+  - type: dropdown
+    id: cooling
+    attributes:
+      label: Cooling observations
+      description: No stress test needed. Fan noise alone does not verify a thermal failsafe.
+      options: ["Not tested / unknown", "No problem noticed", "Possible problem"]
+  - type: dropdown
+    id: recovery
+    attributes:
+      label: Recovery or fallback boot
+      description: Do not reboot or risk a working machine just to fill this out.
+      options: ["Not tested / unknown", "Actually booted successfully", "Tried and failed"]
+  - type: textarea
+    id: observations
+    attributes:
+      label: What happened?
+      description: Explain partial failures, steps that reproduce them, monitor/dock connections, and how you observed success. Do not include private logs.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Optional reviewed evidence
+      description: You may attach a sanitized inventory or cropped screenshot. Check it first for personal data. No automatic upload occurs.
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Public report review
+      options:
+        - label: I reviewed this report and its attachments for private identifiers and account information.
+          required: true

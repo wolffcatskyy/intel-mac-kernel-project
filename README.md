@@ -34,6 +34,12 @@ Inventory prints to stdout and makes no network requests. Review any report befo
 A plan never approves initramfs-free boot in this preview: storage-topology and firmware
 gates are intentionally not implemented yet.
 
+## Share your results — no coding needed
+
+[Open the results form](https://github.com/wolffcatskyy/intel-mac-linux/issues/new?template=hardware-results.yml).
+Working, failing and untested observations are welcome, including stock Linux installations.
+No fork or custom kernel is required. [How reports are reviewed](docs/RESULTS.md).
+
 ## Contribute
 
 Start with [component work packages](docs/WORK-PACKAGES.md),
@@ -51,12 +57,6 @@ user-controlled boot → reported functional validation.
 Only the first planning/audit pieces exist today. Future installation must preserve
 a working kernel, initramfs and boot entries, and must fail closed on unknown storage.
 
-## Boundaries
+## License
 
-No proprietary driver/firmware blobs, Apple keys, account data, VM identities or disk
-images belong here. Do not turn a user's local mitigations=off, maximum fan setting or
-experimental boot flag into a distribution default. Static wl linking is research only;
-the supported design target is an exact-kernel precompiled module without first-boot DKMS.
-
-Original toolkit code is MIT licensed. Any future kernel patches retain their applicable
-upstream licenses and attribution. No third-party patches or firmware are bundled yet.
+Original toolkit code is MIT licensed. Third-party components retain their own licenses.

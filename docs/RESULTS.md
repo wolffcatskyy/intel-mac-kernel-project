@@ -1,6 +1,6 @@
 # Share results — no code required
 
-[Share your Mac's results](https://github.com/wolffcatskyy/intel-mac-linux/issues/new?template=hardware-results.yml)
+[Share your Mac's results](https://github.com/wolffcatskyy/intel-mac-kernel-project/issues/new?template=hardware-results.yml)
 
 Anyone with a GitHub account can fill out the form. No fork, pull request, terminal command,
 custom kernel or toolkit installation is required. Stock-distribution observations, failures

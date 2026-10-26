@@ -1,4 +1,6 @@
-# Intel Mac Linux
+# Intel Mac Kernel Project
+
+**Keeping Intel Macs useful with Linux built for their hardware.**
 
 ## Apple is moving on from Intel Macs. We’re building what comes next.
 
@@ -8,8 +10,8 @@ transition easier—and to help Linux work better on the hardware people already
 
 The goal is simple: **keep good Macs useful, with less guesswork and fewer workarounds.**
 
-[Share your Mac’s results](https://github.com/wolffcatskyy/intel-mac-linux/issues/new?template=hardware-results.yml) ·
-[Find a contributor task](https://github.com/wolffcatskyy/intel-mac-linux/issues) ·
+[Share your Mac’s results](https://github.com/wolffcatskyy/intel-mac-kernel-project/issues/new?template=hardware-results.yml) ·
+[Find a contributor task](https://github.com/wolffcatskyy/intel-mac-kernel-project/issues) ·
 [See the roadmap](docs/ROADMAP.md)
 
 ## Linux that understands your Mac
@@ -40,7 +42,7 @@ An independent, community-led project in early development.
 Have Linux running on an Intel Mac? Tell us what works, what fails and what you haven’t
 tested. Stock installations, upgraded machines and unsuccessful attempts are all useful.
 
-**[Share your Mac’s results →](https://github.com/wolffcatskyy/intel-mac-linux/issues/new?template=hardware-results.yml)**
+**[Share your Mac’s results →](https://github.com/wolffcatskyy/intel-mac-kernel-project/issues/new?template=hardware-results.yml)**
 
 No fork or custom kernel is required. A GitHub account is needed to submit the form.
 [How community reports are reviewed](docs/RESULTS.md).
@@ -51,7 +53,7 @@ We welcome developers, packagers, hardware owners, testers and writers. There ar
 tasks for kernel and graphics work, EFI and recovery, thermal control, distro integration,
 hardware profiles and documentation.
 
-- [Open contributor tasks](https://github.com/wolffcatskyy/intel-mac-linux/issues)
+- [Open contributor tasks](https://github.com/wolffcatskyy/intel-mac-kernel-project/issues)
 - [Component work packages](docs/WORK-PACKAGES.md)
 - [Roadmap](docs/ROADMAP.md)
 - [Contribution guide](CONTRIBUTING.md)

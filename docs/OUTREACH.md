@@ -15,7 +15,7 @@ with evidence, clear boundaries and an easy way to decline.
 
 ## Draft introduction
 
-We're building an independent, experimental Intel Mac Linux hardware-tailoring toolkit,
+We're building an independent, experimental Intel Mac Kernel Project hardware-tailoring toolkit,
 starting with CachyOS on MacPro6,1. The aim is reusable model profiles and distro adapters,
 with generic recovery preserved and initramfs-free boot only where verified.
 This is not an OCLP fork or affiliated project.

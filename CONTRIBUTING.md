@@ -1,6 +1,6 @@
 # Contributing
 
-No code needed: [share your Mac's results](https://github.com/wolffcatskyy/intel-mac-linux/issues/new?template=hardware-results.yml).
+No code needed: [share your Mac's results](https://github.com/wolffcatskyy/intel-mac-kernel-project/issues/new?template=hardware-results.yml).
 See [reporting and review](docs/RESULTS.md).
 
 

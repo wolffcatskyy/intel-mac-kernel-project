@@ -1,5 +1,9 @@
 # Contributing
 
+No code needed: [share your Mac's results](https://github.com/wolffcatskyy/intel-mac-linux/issues/new?template=hardware-results.yml).
+See [reporting and review](docs/RESULTS.md).
+
+
 Pick one ID in docs/WORK-PACKAGES.md. State exact model, component variant, distribution,
 kernel and evidence level. Keep PRs focused; describe what was and was not tested.
 Do not claim support from a profile match alone.

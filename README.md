@@ -16,27 +16,36 @@ tested hardware profiles and tools that Linux distributions and Mac owners can u
 [Find a contributor task](https://github.com/wolffcatskyy/intel-mac-kernel-project/issues) ·
 [See the roadmap](docs/ROADMAP.md)
 
-## Why Intel Macs need their own approach
+## The hardware still works. The missing piece is a shared support effort.
 
-“Intel Mac” spans many generations of hardware. A configuration that works for one
-family may leave another with missing features or require a different boot path.
-The project brings those differences into a shared, versioned knowledge base:
+Linux gives Intel Macs a future beyond their last supported macOS release. But being
+able to boot Linux and having a Mac that works well every day are different things.
 
-- **Installation and boot:** Apple firmware differences, bootloader compatibility and
-  recovery paths that account for the model.
-- **Connectivity:** the drivers and firmware needed for onboard Wi-Fi, Bluetooth,
-  Ethernet and attached peripherals.
-- **Graphics and displays:** integrated and discrete graphics, display outputs,
-  brightness controls and model-specific driver requirements.
-- **Everyday usability:** internal audio, microphones, keyboards, trackpads,
-  function keys and other built-in devices.
-- **Power and cooling:** sensors, fan control, battery behavior and suspend/resume
-  requirements appropriate to each family.
-- **Hardware generations:** older EFI systems, later T2-equipped Macs and upgraded
-  components treated as distinct configurations rather than one universal recipe.
+Apple designed these computers as complete systems. Graphics, firmware, audio, input
+devices and power management vary across generations, and some need support that a
+generic installation cannot supply on its own. Owners can end up piecing together
+drivers, patches and boot settings before the machine feels complete.
 
-These are development areas, not a claim that every model or feature is already
-supported. Current coverage belongs in the [support matrix](docs/SUPPORT.md).
+The community has already done much of that work. The problem is making it travel:
+a fix discovered for one model should become something the next owner can use, a
+distribution can package and a maintainer can check against the next kernel.
+
+**That is what the Intel Mac Kernel Project is being built to do.**
+
+We’re bringing model-specific knowledge into a shared configuration database, then
+combining it with hardware detection to build for the Mac actually in front of us.
+That means accounting for the differences between a MacBook and an iMac, between
+hardware generations, and between an original machine and one its owner has upgraded.
+
+The work spans connectivity, graphics, sound, keyboards and trackpads, battery and
+cooling behavior, storage and boot compatibility. Each tested improvement can become
+a reusable part of a model profile instead of another workaround buried in a thread.
+
+**The ambition: make choosing Linux the beginning of a Mac’s next chapter, rather
+than the beginning of another troubleshooting project.**
+
+See the [roadmap](docs/ROADMAP.md) for development work and the
+[support matrix](docs/SUPPORT.md) for current coverage.
 
 ## Known configurations, verified against the actual hardware
 

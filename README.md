@@ -15,11 +15,6 @@ is outside scope. No affiliation with Apple, CachyOS, Dortania or OCLP is implie
 - Resolved kernel-config assertions that catch unwanted drivers re-enabled by dependencies.
 - Synthetic tests; no hardware qualification or performance claims.
 
-The existing local Mac Pro experiment is evidence to port, **not a release of this toolkit**.
-A 7.3 slim boot was demonstrated on one system. The later 7.3 final rebuild passed artifact
-checks but remains uninstalled; the requested CachyOS 7.2.7-1 port remains unbuilt.
-Graphics crashes and framebuffer failures remain open blockers.
-
 ## Try it without installation or root
 
 From the repository directory:

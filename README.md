@@ -1,56 +1,62 @@
 # Intel Mac Linux
 
-A community toolkit for evidence-based Linux hardware tailoring on Intel Macs.
-CachyOS is the first integration target; the core is designed for additional distributions.
+## Apple is moving on from Intel Macs. We’re building what comes next.
 
-**Status: experimental developer preview.** This repository does not install kernels,
-modify firmware, partition disks or guarantee support for every Intel Mac. Apple silicon
-is outside scope. No affiliation with Apple, CachyOS, Dortania or OCLP is implied.
+Millions of Intel Macs still have useful life ahead of them. As their macOS upgrade paths
+close, Linux gives owners another way forward. We’re building the tools to make that
+transition easier—and to help Linux work better on the hardware people already own.
 
-## What works here today
+The goal is simple: **keep good Macs useful, with less guesswork and fewer workarounds.**
 
-- Read-only model, CPU-feature and PCI inventory, omitting hardware serials and account data.
-- Exact model/vendor matching against an experimental MacPro6,1 profile.
-- Conservative planning that retains the generic kernel and initramfs.
-- Resolved kernel-config assertions that catch unwanted drivers re-enabled by dependencies.
-- Synthetic tests; no hardware qualification or performance claims.
+[Share your Mac’s results](https://github.com/wolffcatskyy/intel-mac-linux/issues/new?template=hardware-results.yml) ·
+[Find a contributor task](https://github.com/wolffcatskyy/intel-mac-linux/issues) ·
+[See the roadmap](docs/ROADMAP.md)
 
-## Try it without installation or root
+## Linux that understands your Mac
 
-From the repository directory:
+An Intel Mac is more than a generic PC with an Apple logo. Its graphics, sound, cooling,
+networking and boot firmware can need model-specific attention. Owners shouldn’t have to
+rediscover the same fixes across years of forum posts.
 
-    PYTHONPATH=src python3 -m intel_mac_linux.cli inventory
-    PYTHONPATH=src python3 -m intel_mac_linux.cli plan
-    PYTHONPATH=src python3 -m intel_mac_linux.cli audit-config /path/to/resolved.config
-    PYTHONPATH=src python3 -m unittest discover -s tests -v
+We’re working toward a toolkit that recognizes the Mac and its actual components, brings
+the relevant fixes together, and helps produce a Linux setup suited to that machine:
 
-Or install into a disposable virtual environment with pip install ., then use iml.
-Inventory prints to stdout and makes no network requests. Review any report before sharing.
-A plan never approves initramfs-free boot in this preview: storage-topology and firmware
-gates are intentionally not implemented yet.
+- **Easier installation:** model-aware guidance and, over time, installer integration.
+- **Hardware that works together:** coordinated graphics, audio, networking, cooling and peripheral support.
+- **Tailored kernels:** the drivers and firmware a machine needs, with less unnecessary bulk.
+- **Reliable recovery:** keep a working fallback when trying a new configuration.
+- **Shared knowledge:** turn community observations into reviewed, reusable hardware profiles.
 
-## Share your results — no coding needed
+## Start with CachyOS. Build for the wider Linux community.
 
-[Open the results form](https://github.com/wolffcatskyy/intel-mac-linux/issues/new?template=hardware-results.yml).
-Working, failing and untested observations are welcome, including stock Linux installations.
-No fork or custom kernel is required. [How reports are reviewed](docs/RESULTS.md).
+CachyOS and the Mac Pro 6,1 are our starting point. The longer-term goal is a shared
+foundation for more Intel Mac families and more Linux distributions, with each combination
+earning support through testing and community experience.
 
-## Contribute
+An independent, community-led project in early development.
 
-Start with [component work packages](docs/WORK-PACKAGES.md),
-[roadmap](docs/ROADMAP.md), [contribution guide](CONTRIBUTING.md) and
-[support policy](docs/SUPPORT.md).
-We need kernel/DRM, EFI, packaging, thermal-control, testing and documentation contributors.
-Model owners can contribute reviewed, sanitized observations without writing kernel code.
+## Your results can help—even if you don’t write code
 
-## Architecture
+Have Linux running on an Intel Mac? Tell us what works, what fails and what you haven’t
+tested. Stock installations, upgraded machines and unsuccessful attempts are all useful.
 
-Discovery → component inventory → model profile → compatibility resolution →
-reviewable plan → distro build adapter → artifact checks → explicit installation →
-user-controlled boot → reported functional validation.
+**[Share your Mac’s results →](https://github.com/wolffcatskyy/intel-mac-linux/issues/new?template=hardware-results.yml)**
 
-Only the first planning/audit pieces exist today. Future installation must preserve
-a working kernel, initramfs and boot entries, and must fail closed on unknown storage.
+No fork or custom kernel is required. A GitHub account is needed to submit the form.
+[How community reports are reviewed](docs/RESULTS.md).
+
+## Help build it
+
+We welcome developers, packagers, hardware owners, testers and writers. There are specific
+tasks for kernel and graphics work, EFI and recovery, thermal control, distro integration,
+hardware profiles and documentation.
+
+- [Open contributor tasks](https://github.com/wolffcatskyy/intel-mac-linux/issues)
+- [Component work packages](docs/WORK-PACKAGES.md)
+- [Roadmap](docs/ROADMAP.md)
+- [Contribution guide](CONTRIBUTING.md)
+- [Developer quickstart](docs/DEVELOPMENT.md)
+- [Support and evidence policy](docs/SUPPORT.md)
 
 ## License
 

@@ -1,6 +1,6 @@
 # Intel Mac Kernel Project
 
-**For those who know how to use a smaller package.**
+**A smaller package for those who know how to use it. 😂**
 
 ## Apple is moving on. These Macs still have work to do.
 

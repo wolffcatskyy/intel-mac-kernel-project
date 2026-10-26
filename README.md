@@ -1,6 +1,6 @@
 # Intel Mac Kernel Project
 
-**A future for Intel Macs. Linux built for their hardware.**
+**For those who know how to use a smaller package.**
 
 ## Apple is moving on. These Macs still have work to do.
 

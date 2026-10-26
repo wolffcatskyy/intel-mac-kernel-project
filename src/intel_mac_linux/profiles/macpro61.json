@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "macpro61",
+  "models": ["MacPro6,1"],
+  "tier": "experimental",
+  "scope": "Initial reference model; GPU, CPU and storage variants need separate validation.",
+  "cpu_baseline": "x86-64-v1",
+  "required_builtin": ["SATA_AHCI", "NVME_CORE", "BLK_DEV_NVME", "EXT4_FS", "BTRFS_FS", "DRM_AMDGPU", "DRM_AMDGPU_SI", "TIGON3", "SENSORS_APPLESMC", "SENSORS_CORETEMP", "SND_HDA_INTEL", "SND_HDA_CODEC_CIRRUS", "SND_HDA_CODEC_HDMI", "USB4", "KVM", "KVM_INTEL"],
+  "required_disabled": ["DRM_RADEON", "BCMA", "SSB", "B43", "IEEE802154", "MAC80211_HWSIM", "DRM_VKMS", "DRM_VGEM"],
+  "known_blockers": ["AMDGPU video playback crashes and framebuffer allocation failures remain unresolved on the measured 7.3 system.", "Final 7.3 rebuild has artifact checks but no installed boot validation.", "Requested CachyOS 7.2.7-1 port has not been built.", "BCM4360 requires exact-kernel precompiled proprietary wl; static linking remains unproven."],
+  "evidence": [{"kind": "historical-local", "claim": "One MacPro6,1 booted an earlier 7.3 slim kernel without initramfs.", "limit": "Not universal model, variant, performance or long-term stability proof."}],
+  "default_security_policy": "Keep distribution defaults. No automatic mitigations=off or signature bypass.",
+  "initramfs_free": "candidate-only; independently verify direct root topology, built-in dependencies and early firmware",
+  "upstream_issues": ["https://github.com/CachyOS/linux-cachyos/issues/1107"]
+}

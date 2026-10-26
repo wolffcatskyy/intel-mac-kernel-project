@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+build/
+dist/
+reports/
+*.qcow2
+*.raw
+*.ko*
+*.bin
+*.fd
+*.pkg.tar.*

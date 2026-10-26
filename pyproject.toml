@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "intel-mac-linux"
+version = "0.1.0"
+description = "Read-only Intel Mac hardware discovery and evidence-based Linux kernel planning"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+
+[project.scripts]
+iml = "intel_mac_linux.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+intel_mac_linux = ["profiles/*.json"]

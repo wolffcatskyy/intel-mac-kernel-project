@@ -56,7 +56,23 @@ layouts can also boot without an initramfs. Neither is an absolute rule: encrypt
 setups can keep a minimal initramfs, and drivers that require separate packaging remain
 explicit exceptions.
 
-**Smaller by selecting carefully. More complete by including the right things.**
+### Why size matters
+
+A Mac should not need a collection of drivers for thousands of devices it will never
+contain. Removing that unrelated support can make the installed kernel and driver
+collection substantially smaller.
+
+That means **less disk space, smaller kernel downloads and updates, and less code to
+compile and package**. For older machines with limited storage, those savings are
+practical—not cosmetic.
+
+Size also needs an honest comparison. Moving drivers and firmware into the kernel can
+make the kernel file itself larger while making the complete boot and driver package
+smaller. We measure the whole result, including modules, firmware and any initramfs.
+Smaller files alone do not prove lower RAM use or faster execution; those benefits
+need their own measurements.
+
+**Keep the hardware support. Lose the unnecessary bulk.**
 
 These are design goals. The [support matrix](docs/SUPPORT.md) records current coverage;
 the [roadmap](docs/ROADMAP.md) tracks what remains to build.
